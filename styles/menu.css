@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Bigshot+One|Oswald|Sail|Tenali+Ramakrishna&display=swap');
+
+:root {
+	--red: #831219;
+	--beige: #e8d2a0;
+	--dark-red: #320807;
+	--white: #ffffff;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	margin-bottom: 0;
+}
+
+/* NAVIGATION MENU */
+nav {
+	height: 15vh;
+	background-color: var(--red);
+	margin-top: -5vh;
+}
+
+.nav-links {
+	display: flex;
+	width: 50%;
+	list-style-type: none;
+	width: 50%;
+	height: 100%;
+	margin-right: auto;
+	justify-content: space-around;
+	align-items: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20pt;
+}
+
+.nav-links li a {
+	text-decoration: none;
+	color: var(--beige);
+}
+
+.nav-links li a:hover {
+	border-bottom: 0.2vw solid var(--beige);
+	transition: 200ms;
+}
+
+.this-page {
+	border-bottom: 0.2vw solid var(--beige);
+	cursor: default;
+}
+
+.this-page-footer {
+	color: var(--white);
+	cursor: default;
+}
+
+/* MENU HEADER */
+.menu-header {
+	background-color: var(--red);
+	color: var(--beige);
+	width: 88%;
+	margin: -3% auto 0 auto;
+	height: auto;
+	text-align: center;
+	font-family: 'Bigshot One', cursive;
+	font-size: 4vw;
+	box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.79);
+	-webkit-box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.79);
+	-moz-box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.79);
+	border-radius: 5%;
+}
+
+/* MENU ITEMS */
+.menu-part-header {
+	width: 76%;
+	text-align: center;
+	margin: 0 auto 2% auto;
+	background-color: var(--beige);
+	color: var(--red);
+	font-family: 'Bigshot One', cursive;
+	font-size: 1.8vw;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0px 10px 24px -9px rgba(0,0,0,0.46);
+	-webkit-box-shadow: 0px 10px 24px -9px rgba(0,0,0,0.46);
+	-moz-box-shadow: 0px 10px 24px -9px rgba(0,0,0,0.46);
+	cursor: pointer;
+	border-radius: 5%;	
+}
+
+.menu-items-to-hide {
+	display: none;
+}
+
+.menu-item {
+	width: 64%;
+	margin: 0 auto 0 auto;
+	font-family: 'Tenali Ramakrishna', sans-serif;
+}
+
+.item-name-and-price {
+	font-size: 2.8vw;
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-top: 5%;
+}
+
+.item-ingredients {
+	font-size: 1.5vw;
+	margin-top: 0;
+	margin-bottom: 5%;
+}
+
+.combinations {
+	text-align: right;
+	font-size: 2.8vw;
+	font-weight: bold;
+}
+
+.toppings-available {
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	font-size: 2.8vw;
+	width: 64%;
+	margin: 0 auto 0 auto;
+}
+
+.toppings-available h3 {
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.toppings-available p {
+	margin-top: 0;
+}
+
+.additional-information {
+	width: 64%;
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	font-size: 2.8vw;
+	text-align: center;
+	margin: 2% auto 0 auto;
+}
+
+footer {
+	padding-top: 2%;
+	margin-top: 8%;
+	background-color: var(--red);
+	color: var(--beige);
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	font-size: 1.8vw;
+}
+
+/* SIMPLIFIED MENU */
+footer ul {
+	text-align: center;
+}
+
+footer ul li {
+	list-style-type: none;
+}
+
+footer ul li a {
+	text-decoration: none;
+	color: inherit;
+}
+
+footer ul li a:hover {
+	color: var(--white);
+	transition: 250ms;
+}
+
+footer hr {
+	border-color: var(--beige);
+}
+
+/* CONTACTS AND SOCIAL MEDIAS */
+footer section {
+	display: inline-flex;
+	width: 94%;
+	margin: 0 3% 0 3%;
+}
+
+footer section p {
+	display: inline-flex;
+	width: 100%;
+}
+
+footer section a img {
+	width: 3vw;
+}
+
+.phone-number {
+	margin-right: 45vw;
+}
+
+
+/* ADAPTIVE WEB-DESIGN FOR PHONE */
+@media screen and (max-width: 845px) {
+	nav {
+		position: relative;
+		height: 10vh;
+		margin-top: 0;
+	}
+
+	.hamburger {
+		position: absolute;
+		z-index: 10;
+		cursor: pointer;
+		left: 6%;
+		top: 50%;
+		transform: translate(6%, -50%);
+	}
+
+	.line {
+		background-color: var(--beige);
+		width: 8vw;
+		height: 0.5vh;
+		margin: 12%;
+	}
+
+	.nav-links {
+		position: fixed;
+		background-color: var(--red);
+		height: 100vh;
+		width: 100vw;
+		flex-direction: column;
+		clip-path: circle(1px at -5% -40%);
+		-webkit-clip-path: circle(1px at -5% -40%);
+		transition: all 1s ease-out;
+	}
+
+	.nav-links.open {
+		clip-path: circle(2500px at -5% -40%);
+		-webkit-clip-path: circle(2500px at -5% -40%);
+    }
+}

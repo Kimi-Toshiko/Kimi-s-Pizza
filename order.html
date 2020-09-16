@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Order</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Online Pizza Ordering System">
+		<meta name="author" content="ID00008449">
+		<meta name="keywords" content="Pizza, Order">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="styles/order.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	</head>
+	
+	<body>
+
+			<section class="cart-image" id="btnCart">
+					<img src="img/cart.png" alt="Cart">
+			</section>
+	
+				<section class="list-of-orders" id="listOfOrders">
+					<div class="your-order">
+						<h1>— Your Order —</h1>
+					</div>
+
+					<div class="close-button" id="btnClose">
+						<p>X</p>
+					</div>
+
+					<table class="ordered-items-table">
+						<tr>
+						  <td>
+							 <table class="header-table">
+							   <tr>
+								  <th class="number-cell">№</th>
+								  <th class="product-name-cell">Product Name</th>
+								  <th class="price-cell">Price</th>
+							   </tr>
+							 </table>
+						  </td>
+						</tr>
+						<tr>
+						  <td>
+							 <div class="block-to-scroll">
+							   <table class="data-table">
+							   </table>  
+							 </div>
+						  </td>
+						</tr>
+					 </table>
+
+				<div class="order-button" id="btnOrderToForm">
+					<p>ORDER</p>
+				</div>
+			</section>
+
+			<section class="list-of-orders" id="orderForm">
+				<div class="your-order">
+					<h1>— Please Fill the Form —</h1>
+				</div>
+
+				<div class="close-button" id="btnCloseForm">
+					<p>X</p>
+				</div>
+
+				<form>
+					<div>
+						<label for="firstName">First Name:</label>
+						<input type="text" name="first-name" id="firstName">
+					</div>
+					<div>
+						<label for="lastName">Last Name:</label>
+						<input type="text" name="last-name" id="lastName">
+					</div>
+					<div>
+						<label for="addressField">Adress:</label>
+						<input type="text" name="card-number" id="addressField">
+					</div>
+					<div>
+						<label for="phoneNumber">Phone Number:</label>
+						<input type="text" name="card-pin" id="phoneNumber">
+					</div>
+				</form>
+
+				<div class="order-button" id="btnPayOrder">
+					<p>PAY</p>
+				</div>
+			</section>
+
+        <header>
+            <nav>
+                <!-- HAMBURGER LINES -->
+                    <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <!-- NAVIGATION LINKS -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Main</a></li>
+                    <li><a href="menu.html" >Menu</a></li>
+                     <li><a href="order.html" class="this-page">Order</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+			
+
+
+            <!-- PRODUCTS TO ADD TO CART -->
+
+            <!-- SALADS AND SLIDES -->
+            <section>
+            	<!-- MENU HEADER -->
+            	<div class="menu-header">
+                	<h1 id="btnSaladsAndSlides">Salads and slides</h1>
+            	</div>
+            	<!-- PRODUCTS TO BUY -->
+            	<div class="shown-onclick" id="saladsAndSlidesItems">
+            		<!-- FIRST LINE -->
+            		<div class="product-line">
+            			<div class="product-wrapper">
+                			<h2>URBAN CHEF</h2>
+                			<hr>
+                			<img src="img/urban-chef-img.png" alt="Urban Chef" class="product-image">
+                			<div class="price-and-button">
+                				<p>$10.50</p>
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnUrbanChef">
+                			</div>
+                		</div>
+
+                		<div class="product-wrapper">
+                			<h2>ARUGULA SALAD</h2>
+                			<hr>
+                			<img src="img/arugula-salad-img.png" alt="Arugula Salad" class="product-image">
+                			<div class="price-and-button">
+                				<p>$9.50</p>
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnArugulaSalad">
+                			</div>
+                		</div>
+
+               		<div class="product-wrapper">
+                			<h2>CAESAR SALAD</h2>
+                			<hr>
+                			<img src="img/caesar-salad-img.png" alt="Caesar Salad" class="product-image">
+                			<div class="price-and-button">
+                				<p>$8.50</p>
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnCaesarSalad">
+                			</div>
+                		</div>
+            		</div>
+            	
+            		<!-- SECOND LINE -->
+            		<div class="product-line after-line">
+            			<div class="product-wrapper">
+                			<h2>GREEK SALAD</h2>
+                			<hr>
+                			<img src="img/greek-salad-img.png" alt="Greek Salad" class="product-image">
+                			<div class="price-and-button">
+                				<p>$9.75</p>
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnGreekSalad">
+                			</div>
+                		</div>
+
+               			<div class="product-wrapper">
+                			<h2>ROAST CARROTS</h2>
+                			<hr>
+                			<img src="img/roast-carrots-img.png" alt="Roast Carrots" class="product-image">
+                			<div class="price-and-button">
+                				<p>$6.95</p>
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnRoastCarrots">
+                			</div>
+                		</div>
+
+                		<div class="product-wrapper unshown"></div>
+        			</div>
+        		</div>
+        	</section>
+
+        	<!-- DRINKS -->
+            <section>
+            	<!-- MENU HEADER -->
+            	<div class="menu-header">
+                	<h1 id="btnDrinks">Drinks</h1>
+            	</div>
+            	<!-- PRODUCTS TO BUY -->
+            	<div class="shown-onclick" id="drinksItems">
+	            	<!-- FIRST LINE -->
+	            	<div class="product-line">
+	            		<div class="product-wrapper">
+	                		<h2>BY THE CAN</h2>
+	                		<hr>
+	                		<img src="img/by-the-can-img.png" alt="By The Can" class="product-image">
+	                		<div class="price-and-button">
+                				<p>$1.25</p>
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnByTheCan">
+                			</div>
+
+                			<div class="choose-drink" id="drinkTypeByTheCan">
+								<p id="btnByTheCanCoke">Coke</p>
+								<p id="btnByTheCanDietCoke">Diet Coke</p>
+								<p id="btnByTheCan7Up">7up</p>
+								<p id="btnByTheCanRootBeer">Root Beer</p>
+								<p id="btnByTheCanDrPeper">DrPeper</p>
+								<p id="btnByTheCanDietDrPeper">Diet DrPeper</p>
+							</div>
+                		</div>
+
+                		<div class="product-wrapper">
+                			<h2>BY THE BOTTLE</h2>
+                			<hr>
+                			<img src="img/by-the-bottle-img.png" alt="By The Bottle" class="product-image">
+                			<div class="price-and-button">
+                				<p>$1.25</p>
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnByTheBottle">
+                			</div>
+
+                			<div class="choose-drink" id="drinkTypeByTheBottle">
+								<p id="btnByTheBottleCrystalGeyser">Crystal Geyser</p>
+								<p id="btnByTheBottleSparklingLemon">Sparkling Lemon</p>
+								<p id="btnByTheBottleSparklingLime">Sparkling Lime</p>
+								<p id="btnByTheBottleSparklingPlain">Sparkling Plain</p>
+							</div>
+                		</div>
+
+               	    	<div class="product-wrapper">
+                			<h2>GUAYAKI YERBA MATE/TERERE</h2>
+                			<hr>
+                			<img src="img/guayaki-yerba-mate-terere-img.png" alt="Guayaki Yerba Mate Terere" class="product-image img-in-double-line">
+                			<div class="price-and-button">
+                				<p>$2.95</p>
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnGuayakiYerbaMateTerere">
+                			</div>
+
+                			<div class="choose-drink" id="drinkTypeGuayakiYerbaMateTerere">
+								<p id="btnGuayakiYerbaMateTerereBluephoria">Bluephoria</p>
+								<p id="btnGuayakiYerbaMateTerereEnlightenMint">Enlighten Mint</p>
+								<p id="btnGuayakiYerbaMateTerereRevelBerry">Revel Berry</p>
+								<p id="btnGuayakiYerbaMateTerereMint">Mint</p>
+								<p id="btnGuayakiYerbaMateTererePeach">Peach</p>
+								<p id="btnGuayakiYerbaMateTerereTraditional">Traditional</p>
+							</div>
+                		</div>
+            		</div>
+            	
+            		<!-- SECOND LINE -->
+            		<div class="product-line after-line">
+            			<div class="product-wrapper">
+                			<h2>GUAYAKI YERBA MATE</h2>
+                			<hr>
+                			<img src="img/guayaki-yerba-mate-img.png" alt="Guayaki Yerba Mate" class="product-image img-in-double-line">
+                			<div class="price-and-button">
+                				<p>$2.25</p>
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnGuayakiYerbaMate">
+                			</div>
+
+                			<div class="choose-drink" id="drinkTypeGuayakiYerbaMate">
+								<p id="btnGuayakiYerbaMatePomegranate">Pomegranate</p>
+								<p id="btnGuayakiYerbaMateGrapefruitGinger">Grapefruit Ginger</p>
+								<p id="btnGuayakiYerbaMateBlackberryMint">Blackberry Mint</p>
+							</div>
+                		</div>
+
+               	 		<div class="product-wrapper">
+                			<h2>BOYLAN SODAS</h2>
+                			<hr>
+                			<img src="img/boylan-sodas-img.png" alt="Boylan Sodas" class="product-image">
+                			<div class="price-and-button">
+                				<p>$2.95</p>
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnBoylanSodas">
+                			</div>
+
+                			<div class="choose-drink" id="drinkTypeBoylanSodas">
+								<p id="btnBoylanSodasRootBeer">Root-beer</p>
+								<p id="btnBoylanSodasGingerale">Gingerale</p>
+								<p id="btnBoylanSodasBlackCherryCola">Black Cherry Cola</p>
+								<p id="btnBoylanSodasVanillaCreamCola">Vanilla Cream Cola</p>
+							</div>
+                		</div>
+
+                		<div class="product-wrapper unshown"></div>
+                	</div>
+        		</div>
+        	</section>
+
+        	<!-- COMBINATIONS -->
+            <section>
+            	<!-- MENU HEADER -->
+            	<div class="menu-header">
+                	<h1 id="btnCombinations">Combinations</h1>
+            	</div>
+            	<!-- PRODUCTS TO BUY -->
+            	<div class="shown-onclick" id="combinationsItems">
+            		<!-- FIRST LINE -->
+            		<div class="product-line">
+            			<div class="product-wrapper">
+                			<h2>URBAN COMBO</h2>
+                			<hr>
+                			<img src="img/urban-combo-img.png" alt="Urban Combo" class="product-image">
+                			<div class="price-and-button">
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnUrbanCombo">
+							</div>
+							
+							<div class="choose-size" id="sizesUrbanCombo">
+								<p id="btnUrbanCombo12">12"</p>
+								<p id="btnUrbanCombo14">14"</p>
+								<p id="btnUrbanCombo18">18"</p>
+							</div>
+						</div>
+
+                		<div class="product-wrapper">
+                			<h2>URBAN BEAST</h2>
+                			<hr>
+                			<img src="img/urban-beast-img.png" alt="Urban Beast" class="product-image">
+                			<div class="price-and-button">
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnUrbanBeast">
+                			</div>
+
+                			<div class="choose-size" id="sizesUrbanBeast">
+								<p id="btnUrbanBeast12">12"</p>
+								<p id="btnUrbanBeast14">14"</p>
+								<p id="btnUrbanBeast18">18"</p>
+							</div>
+                		</div>
+
+               	    	<div class="product-wrapper">
+                			<h2>JACK AND DELORES SPECIAL</h2>
+                			<hr>
+                			<img src="img/jack-and-delores-special-img.png" alt="Jack and Delores Special" class="product-image img-in-double-line">
+                			<div class="price-and-button">
+                				<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnJackAndDeloresSpecial">
+                			</div>
+
+                			<div class="choose-size" id="sizesJackAndDoloresSpecial">
+								<p id="btnJackAndDeloresSpecial12">12"</p>
+								<p id="btnJackAndDoloresSpecial14">14"</p>
+								<p id="btnJackAndDoloresSpecial18">18"</p>
+							</div>
+                    	</div>
+                	</div>
+            	
+	            	<!-- SECOND LINE -->
+	            	<div class="product-line after-line">
+	            		<div class="product-wrapper">
+	                		<h2>TRUE GREEK</h2>
+	                		<hr>
+	                		<img src="img/greek-pizza-img.png" alt="Greek Pizza" class="product-image">
+	                		<div class="price-and-button">
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnGreekPizza">
+	                		</div>
+
+	                		<div class="choose-size" id="sizesGreekPizza">
+								<p id="btnTrueGreek12">12"</p>
+								<p id="btnTrueGreek14">14"</p>
+								<p id="btnTrueGreek18">18"</p>
+							</div>
+	                	</div>
+
+		               	<div class="product-wrapper">
+		                	<h2>VEGGIE POWER#1</h2>
+		                	<hr>
+		                	<img src="img/veggie-pizza-1-img.png" alt="Veggie Power 1" class="product-image">
+		                	<div class="price-and-button">
+		                		<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnVeggiePower1">
+	                		</div>
+
+	                		<div class="choose-size" id="sizesVeggiePower1">
+								<p id="btnVeggiePower112">12"</p>
+								<p id="btnVeggiePower114">14"</p>
+								<p id="btnVeggiePower118">18"</p>
+							</div>
+	                	</div>
+
+	                	<div class="product-wrapper">
+	                		<h2>VEGGIE POWER#2</h2>
+	                		<hr>
+	                		<img src="img/veggie-pizza-2-img.png" alt="Veggie Power 2" class="product-image">
+	                		<div class="price-and-button">
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnVeggiePower2">
+	                		</div>
+
+	                		<div class="choose-size" id="sizesVeggiePower2">
+								<p id="btnVeggiePower212">12"</p>
+								<p id="btnVeggiePower214">14"</p>
+								<p id="btnVeggiePower218">18"</p>
+							</div>
+	                	</div>
+	        		</div>
+
+	        		<!-- THIRD LINE -->
+	            	<div class="product-line after-line">
+	            		<div class="product-wrapper">
+	                		<h2>THAI ONE ON</h2>
+	                		<hr>
+	                		<img src="img/thai-one-on-pizza.png" alt="Thai One On" class="product-image">
+	                		<div class="price-and-button">
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnThaiOneOn">
+	                		</div>
+
+	                		<div class="choose-size" id="sizesThaiOneOn">
+								<p id="btnThaiOneOn12">12"</p>
+								<p id="btnThaiOneOn14">14"</p>
+								<p id="btnThaiOneOn18">18"</p>
+							</div>
+	                	</div>
+
+	               	 <div class="product-wrapper">
+	                		<h2>BARBECUE CHICKEN</h2>
+	                		<hr>
+	                		<img src="img/barbecue-chicken-pizza-img.png" alt="Barbecue Chicken" class="product-image">
+	                		<div class="price-and-button">
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnBarbecueChicken">
+	                		</div>
+
+	                		<div class="choose-size" id="sizesBarbecueChicken">
+								<p id="btnBarbecueChicken12">12"</p>
+								<p id="btnBarbecueChicken14">14"</p>
+								<p id="btnBarbecueChicken18">18"</p>
+							</div>
+	                	</div>
+
+	                	<div class="product-wrapper">
+	                		<h2>HAWAIIAN</h2>
+	                		<hr>
+	                		<img src="img/hawaiian-pizza-img.png" alt="Hawaiian" class="product-image">
+	                		<div class="price-and-button">
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnHawaiian">
+	                		</div>
+
+	                		<div class="choose-size" id="sizesHawaiian">
+								<p id="btnHawaiian12">12"</p>
+								<p id="btnHawaiian14">14"</p>
+								<p id="btnHawaiian18">18"</p>
+							</div>
+	                	</div>
+	        		</div>
+
+	        		<!-- FOURTH LINE -->
+	            	<div class="product-line after-line">
+	            		<div class="product-wrapper">
+	                		<h2>CHEESE PLEASE!</h2>
+	                		<hr>
+	                		<img src="img/cheese-please-pizza-img.png" alt="Cheese Please!" class="product-image">
+	                		<div class="price-and-button">
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnCheesePlease">
+	                		</div>
+
+	                		<div class="choose-size" id="sizesCheesePlease">
+								<p id="btnCheesePlease12">12"</p>
+								<p id="btnCheesePlease14">14"</p>
+								<p id="btnCheesePlease18">18"</p>
+							</div>
+	                	</div>
+
+	               		<div class="product-wrapper unshown"></div>
+
+	                	<div class="product-wrapper unshown"></div>
+	        		</div>
+        		</div>
+        	</section>
+
+        	<!-- SLICES -->
+            <section>
+            	<!-- MENU HEADER -->
+            	<div class="menu-header">
+                	<h1 id="btnSlices">Slices</h1>
+            	</div>
+            	<!-- PRODUCTS TO BUY -->
+            	<div class="shown-onclick" id="slicesItems">
+	            	<!-- FIRST LINE -->
+	            	<div class="product-line">
+	            		<div class="product-wrapper">
+	                		<h2>CHEESE</h2>
+	                		<hr>
+	                		<img src="img/cheese-slice-img.png" alt="Cheese" class="product-image">
+	                		<div class="price-and-button">
+	                			<p>$3.75</p>
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnCheeseSlice">
+                			</div>
+                		</div>
+
+                		<div class="product-wrapper">
+                			<h2>SALAMI</h2>
+                			<hr>
+	                		<img src="img/salami-slice-img.png" alt="Salami" class="product-image">
+	                		<div class="price-and-button">
+	                			<p>$4.25</p>
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnSalamiSlice">
+	                		</div>
+	                	</div>
+
+	               	 <div class="product-wrapper">
+	                		<h2>PEPPERONI</h2>
+	                		<hr>
+	                		<img src="img/pepperoni-slices-img.png" alt="Pepperoni" class="product-image">
+	                		<div class="price-and-button">
+	                			<p>$4.50</p>
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnPepperoniSlice">
+	                		</div>
+	                	</div>
+	            	</div>
+	            	
+	            	<!-- SECOND LINE -->
+	            	<div class="product-line after-line">
+	            		<div class="product-wrapper">
+	                		<h2>COMBO SLICES</h2>
+	                		<hr>
+	                		<img src="img/combo-slices-slices-img.png" alt="Combo SLices" class="product-image">
+	                		<div class="price-and-button">
+	                			<p>$5.50</p>
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnComboSlices">
+	                		</div>
+	                	</div>
+
+	               	 	<div class="product-wrapper unshown"></div>
+
+	                	<div class="product-wrapper unshown"></div>
+	        		</div>
+	        	</div>
+        	</section>
+
+        	<!-- PIADINAS -->
+            <section>
+            	<!-- MENU HEADER -->
+            	<div class="menu-header">
+                	<h1 id="btnPiadinas">Piadinas</h1>
+            	</div>
+            	<!-- PRODUCTS TO BUY -->
+            	<div class="shown-onclick" id="piadinasItems">
+	            	<!-- FIRST LINE -->
+	            	<div class="product-line">
+	            		<div class="product-wrapper">
+	                		<h2>PROSCIUTTO PIADINA</h2>
+	                		<hr>
+	                		<img src="img/prosciutto-piadina-img.png" alt="Prosciutto Piadina" class="product-image img-in-double-line">
+	                		<div class="price-and-button">
+	                			<p>$9.50</p>
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnProsciuttoPiadina">
+	                		</div>
+	                	</div>
+
+	                	<div class="product-wrapper">
+	                		<h2>CHICKEN PIADINA</h2>
+	                		<hr>
+	                		<img src="img/chicken-piadina-img.png" alt="Chicken Piadina" class="product-image">
+	                		<div class="price-and-button">
+	                			<p>$8.75</p>
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnChickenPiadina">
+	                		</div>
+	                	</div>
+
+	               	 	<div class="product-wrapper">
+	                		<h2>EGGPLANT PIADINA</h2>
+	                		<hr>
+	                		<img src="img/eggplant-piadina-img.png" alt="Eggplant Piadina" class="product-image">
+	                		<div class="price-and-button">
+	                			<p>$8.50</p>
+	                			<img src="img/add-button.png" alt="Add Button" class="add-button" id="btnEggplantPiadina">
+	                		</div>
+	                	</div>
+	            	</div>
+	            </div>
+        	</section>
+        </main>
+
+        <footer>
+			<!-- SIMPLIFIED MENU -->
+			<ul>
+				<li><a href="index.html">Main</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="order.html"  class="this-page-footer">Order</a></li>
+			</ul>
+
+			<hr>
+
+			<!-- CONTACTS AND SOCIAL MEDIAS -->
+			<section>
+				<span class="phone-number">
+					<p>Contact us: +998 71 444 77 99</p>
+				</span>
+
+				<span class="social-medias">
+					<p>Follow us on social medias:</p>
+					<a href=""><img src="img/instagram_logo.png" alt="Instagram"></a>
+					<a href=""><img src="img/facebook_logo.png" alt="Facebook"></a>
+					<a href=""><img src="img/twitter_logo.png" alt="Twitter"></a>
+					<a href=""><img src="img/vk_logo.png" alt="Vkontakte"></a>
+					<a href=""><img src="img/telegram_logo.png" alt="Telegram"></a>
+				</span>
+			</section>
+		</footer>
+
+		<script type="text/javascript" src="scripts/menu.js"></script>
+        <script type="text/javascript" src="scripts/dropdown-menu.js"></script>
+        <script type="text/javascript" src="scripts/make-order.js"></script>
+	</body>
+</html>

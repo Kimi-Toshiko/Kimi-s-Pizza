@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css?family=Bigshot+One|Oswald|Sail|Tenali+Ramakrishna&display=swap');
+
+:root {
+	--red: #831219;
+	--beige: #e8d2a0;
+	--dark-red: #320807;
+	--white: #ffffff;
+	--light-beige: #ffefca;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	margin-bottom: 0;
+}
+
+/* CART */
+.cart-image {
+    position: fixed;
+    z-index: 2;
+    border-radius: 100%;
+	top: 88%;
+	left: 94.5%;
+    cursor: pointer;
+    background-color: var(--red);
+}
+
+.cart-image img {
+	width: 5vw;
+	height: auto;
+}
+
+.cart-image:hover, .cart-image:focus, .cart-image:active {
+    -webkit-box-shadow: 0px 0px 25px 9px rgba(232,210,160,1);
+    -moz-box-shadow: 0px 0px 25px 9px rgba(232,210,160,1);
+    box-shadow: 0px 0px 25px 9px rgba(232,210,160,1);
+    transition: 300ms;
+}
+
+/* LIST OF ORDERS */
+.list-of-orders {
+	position: fixed;
+	width: 86%;
+	height: 86vh;
+	margin-left: 7%;
+	margin-top: 7vh;
+	background-color: var(--light-beige);
+	border-radius: 3%;
+	box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.75);
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	display: none;
+}
+
+.your-order {
+	height: 5.5vw;
+	color: var(--beige);
+	background-color: var(--red);
+	margin-top: -2%;
+}
+
+.your-order h1 {
+	font-size: 4vw;
+	text-align: center;
+}
+
+.close-button {
+	position: absolute;
+	font-size: 4vw;
+	top: -2.5vw;
+	left: 76vw;
+	color: var(--beige);
+	cursor: pointer;
+}
+
+.close-button:hover {
+	color: var(--white);
+	transition: 200ms;
+}
+
+.ordered-items-table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 2%;
+}
+
+.number-cell {
+	width: 10%;
+}
+.product-name-cell {
+	width: 70%;
+}
+.price-cell {
+	width: 20%;
+}
+
+.header-table {
+	width: 100%;
+	text-align: center;
+	border-bottom: 3px solid black;
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	font-size: 2vw;
+}
+
+.block-to-scroll {
+	width: 100%;
+	height: 44vh;
+	overflow: auto;
+}
+
+.data-table {
+	border-collapse: collapse;
+	border-bottom: 1px solid black;
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	width: 100%;
+}
+
+.data-table tr {
+	border-bottom: 1px solid black;
+	font-size: 2vw;
+	text-align: center;
+}
+
+.order-button {
+	width: 20%;
+	margin-left: 40%;
+	height: 7vh;
+	text-align: center;
+	background-color: var(--red);
+	color: var(--beige);
+	font-size: 3vw;
+	font-weight: bold;
+	border-radius: 4%;
+}
+
+.order-button:hover {
+	background-color: var(--beige);
+	color: var(--red);
+	transition: 200ms;
+	cursor: pointer;
+}
+
+/* .order-price {
+	font-size: 3vw;
+	text-align: center;
+	font-weight: bold;
+} */
+
+.list-of-orders form {
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-top: 3%;
+}
+
+.list-of-orders form div {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 2.5%;
+}
+
+.list-of-orders form div label {
+	font-size: 2.5vw;
+}
+
+.list-of-orders form div input {
+	width: 50vw;
+	padding-left: 2%;
+	font-size: 1.5vw;
+	border-radius: 3%;
+}
+
+.list-of-orders form div input:focus, .list-of-orders form div input:active, .list-of-orders form div input:hover {
+	-webkit-box-shadow: inset 0px 0px 5px 0px rgba(224,13,13,1);
+	-moz-box-shadow: inset 0px 0px 5px 0px rgba(224,13,13,1);
+	box-shadow: inset 0px 0px 5px 0px rgba(224,13,13,1);
+	transition: 250ms;
+}
+
+
+
+
+/* NAVIGATION MENU */
+nav {
+	height: 15vh;
+	background-color: var(--red);
+	margin-top: -5vh;
+}
+
+.nav-links {
+	display: flex;
+	width: 50%;
+	list-style-type: none;
+	width: 50%;
+	height: 100%;
+	margin-right: auto;
+	justify-content: space-around;
+	align-items: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20pt;
+}
+
+.nav-links li a {
+	text-decoration: none;
+	color: var(--beige);
+}
+
+.nav-links li a:hover {
+	border-bottom: 0.2vw solid var(--beige);
+	transition: 200ms;
+}
+
+.this-page {
+	border-bottom: 0.2vw solid var(--beige);
+	cursor: default;
+}
+
+.this-page-footer {
+	color: var(--white);
+	cursor: default;
+}
+
+/* PRODUCTS TO ADD TO CART */
+/* MENU HEADER */
+.menu-header {
+	background-color: var(--red);
+	color: var(--beige);
+	width: 88%;
+	margin: -3% auto 0 auto;
+	height: auto;
+	text-align: center;
+	font-family: 'Bigshot One', cursive;
+	font-size: 4vw;
+	box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.79);
+	-webkit-box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.79);
+	-moz-box-shadow: 0px 10px 17px -7px rgba(0,0,0,0.79);
+	cursor: pointer;
+	border-radius: 5%;
+}
+
+/* PRODUCTS TO BUY */
+.product-line {
+	display: flex;
+	width: 88%;
+	justify-content: space-around;
+	align-content: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.after-line {
+	margin-top: 5%;
+}
+
+.product-wrapper {
+	width: 28%;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 7%;
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	box-shadow: 0px 6px 23px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 6px 23px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 6px 23px 2px rgba(0,0,0,0.5);
+}
+
+.product-wrapper h2 {
+	text-align: center;
+	font-size: 3vw;
+	margin-bottom: 0;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.product-wrapper hr {
+	width: 90%;
+	margin-top: 0;
+}
+
+.product-image {
+	width: 80%;
+	height: auto;
+	margin: 4% 10% 4% 10%;
+}
+
+.img-in-double-line {
+	width: 60%;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+
+.add-button {
+	width: 15%;
+	height: 15%;
+	cursor: pointer;
+    margin-bottom: 2%;
+    border-radius: 100%;	
+}
+
+.add-button:hover {
+    -webkit-box-shadow: 0px 5px 15px 1px rgba(131,18,26,1);
+    -moz-box-shadow: 0px 5px 15px 1px rgba(131,18,26,1);
+    box-shadow: 0px 0px 5px 1px rgba(131,18,26,1);
+    transition: 300ms;
+}
+
+.price-and-button {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.price-and-button p {
+	font-size: 3vw;
+	margin: 0;
+	margin-right: 30%;
+}
+
+.unshown {
+	visibility: hidden;
+}
+
+.choose-size {
+	position: absolute;
+	width: 24.2vw;
+	height: 27vw;
+	margin-top: -32%;
+	text-align: center;
+	background-color: white;
+	display: none;
+}
+
+.choose-drink {
+	position: absolute;
+	width: 24.2vw;
+	height: 33.5vw;
+	margin-top: -34.5%;
+	text-align: center;
+	background-color: white;
+	border-radius: 10%;
+	display: none;
+}
+
+.choose-drink p {
+	background-color: var(--red);
+	color: var(--beige);
+	width: 60%;
+	height: 8%;
+	font-size: 2vw;
+	margin-left: 20%;
+	border-radius: 7%;
+	cursor: pointer;
+}
+
+.choose-size p {
+	background-color: var(--red);
+	color: var(--beige);
+	width: 40%;
+	height: 15%;
+	font-size: 3vw;
+	margin-left: 30%;
+	border-radius: 7%;
+	cursor: pointer;
+}
+
+.choose-size p:hover, .choose-drink p:hover {
+	background-color: var(--beige);
+	color: var(--red);
+	transition: 200ms;
+}
+
+section div h3 {
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	font-size: 7.5vw;
+	width: 88%;
+	text-align: center;
+	margin: 5% auto 0 auto;
+}
+
+.shown-onclick {
+	display: none;
+}
+
+footer {
+	padding-top: 2%;
+	margin-top: 8%;
+	background-color: var(--red);
+	color: var(--beige);
+	font-family: 'Tenali Ramakrishna', sans-serif;
+	font-size: 1.8vw;
+}
+
+/* SIMPLIFIED MENU */
+footer ul {
+	text-align: center;
+}
+
+footer ul li {
+	list-style-type: none;
+}
+
+footer ul li a {
+	text-decoration: none;
+	color: inherit;
+}
+
+footer ul li a:hover {
+	color: var(--white);
+	transition: 250ms;
+}
+
+footer hr {
+	border-color: var(--beige);
+}
+
+/* CONTACTS AND SOCIAL MEDIAS */
+footer section {
+	display: inline-flex;
+	width: 94%;
+	margin: 0 3% 0 3%;
+}
+
+footer section p {
+	display: inline-flex;
+	width: 100%;
+}
+
+footer section a img {
+	width: 3vw;
+}
+
+.phone-number {
+	margin-right: 45vw;
+}
+
+/* ADAPTIVE WEB-DESIGN FOR PHONE */
+@media screen and (max-width: 845px) {
+	nav {
+		position: relative;
+		height: 10vh;
+		margin-top: 0;
+	}
+
+	.hamburger {
+		position: absolute;
+		z-index: 10;
+		cursor: pointer;
+		left: 6%;
+		top: 50%;
+		transform: translate(6%, -50%);
+	}
+
+	.line {
+		background-color: var(--beige);
+		width: 8vw;
+		height: 0.5vh;
+		margin: 12%;
+	}
+
+	.nav-links {
+        position: fixed;
+        z-index: 5;
+        margin-top: -3%;
+		background-color: var(--red);
+		height: 100vh;
+		width: 100vw;
+		flex-direction: column;
+		clip-path: circle(1px at -5% -40%);
+		-webkit-clip-path: circle(1px at -5% -40%);
+		transition: all 1s ease-out;
+	}
+
+	.nav-links.open {
+		clip-path: circle(2500px at -5% -40%);
+		-webkit-clip-path: circle(2500px at -5% -40%);
+    }
+    
+    /* CART */
+    .cart-image {
+	    top: 1%;
+	    left: 93%;
+    }
+
+    .cart-image img {
+    	width: 7vw;
+    }
+
+    .order-button {
+        font-size: 4vw;
+    }
+
+    .list-of-orders {
+        height: 80vh;
+        margin-top: 15vh;
+    }
+
+    .list-of-orders form {
+        margin-top: 10%;
+        margin-bottom: 7%;
+    }
+    
+    .list-of-orders form div label {
+        font-size: 3vw;
+        margin-bottom: 3%;
+    }
+    
+    .list-of-orders form div input {
+        font-size: 2vw;
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cart-image {
+	    top: 0;
+	    left: 85%;
+    }
+
+    .cart-image img {
+    	width: 15vw;
+    }
+
+    .order-button {
+        font-size: 6vw;
+    }
+
+    .list-of-orders form {
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+    
+    .list-of-orders form div label {
+        font-size: 3vw;
+        margin-bottom: 10%;
+    }
+    
+    .list-of-orders form div input {
+        font-size: 2vw;
+        margin-bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .cart-image {
+        top: 2%;
+    }
+}
